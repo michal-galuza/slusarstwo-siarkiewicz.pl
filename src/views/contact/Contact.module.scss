@@ -1,0 +1,153 @@
+@mixin center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin wrapperMixin() {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  background-image: url("../../images/landingPagePhotos/Balkon2.jpg");
+  background-size: cover;
+  background-position: -466px 0px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  @include center();
+  @media (min-width: 580px) {
+    background-position: center;
+  }
+}
+.wrapper {
+  @include wrapperMixin();
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  position: absolute;
+  top: 0;
+  left: 31px;
+  transform: translateY(-50%);
+  background: linear-gradient(90.38deg, #5b6bfb 12.05%, #0081ff 89.35%);
+  border-radius: 7px;
+  width: 165px;
+  height: 44px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+  @include center();
+  box-shadow: -5px 5px 15px -3px black;
+  @media (min-width: 720px) {
+    width: 240px;
+    height: 50px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    left: 60px;
+  }
+}
+
+.text {
+  width: 320px;
+  background-color: #ffffff;
+  border-radius: 21px;
+  position: relative;
+  padding: 30px;
+  margin-bottom: 60px;
+  @include center();
+  flex-direction: column;
+  box-shadow: 10px 15px 20px -10px black;
+  @media (min-width: 720px) {
+    width: 500px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  @media (min-width: 1000px) {
+    width: 550px;
+  }
+}
+.btn {
+  background: #0081ff;
+  border-radius: 10px;
+  width: 65%;
+  height: 45px;
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 23px;
+
+  color: #ffffff;
+}
+.input {
+  width: 90%;
+  background: #ffffff;
+  border: 2px solid #0066ff;
+  box-sizing: border-box;
+  border-radius: 10px;
+  height: 45px;
+  margin-top: 25px;
+  padding: 0 10px;
+}
+.form {
+  @include center();
+  flex-direction: column;
+  width: 300px;
+  height: 100%;
+}
+.textArea {
+  padding: 10px 10px;
+  width: 90%;
+  background: #ffffff;
+  border: 2px solid #0066ff;
+  box-sizing: border-box;
+  border-radius: 10px;
+  height: 200px;
+  margin-top: 25px;
+}
+.containerMedia {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: repeat(6, 40px);
+  grid-template-areas:
+    "Media  Fb"
+    "Media Fb"
+    "Tel  number"
+    "Tel  number2"
+    "Mail mail"
+    "Adres adr";
+  margin-bottom: 40px;
+  justify-content: center;
+  align-content: center;
+}
+@mixin title() {
+  color: #00b7ff;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 22px;
+}
+.media {
+  grid-area: Media;
+  @include title();
+}
+.tel {
+  grid-area: Tel;
+  @include title();
+}
+.mail {
+  grid-area: Mail;
+  @include title();
+}
+.adres {
+  grid-area: Adres;
+  @include title();
+}
+.anhor {
+  color: #5b6bfb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .anhor:hover {
+    color: #00b7ff;
+  }
+}

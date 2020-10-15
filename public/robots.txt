@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.slusarstwo-siarkiewicz.pl/sitemap.xml
+

@@ -1,0 +1,170 @@
+@mixin center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin wrapperMixin() {
+  width: 100%;
+  padding-top: 51px;
+  padding-bottom: 40px;
+  background-image: url("../../images/landingPagePhotos/Balkony.jpg");
+  background-size: cover;
+  background-position: -466px 0px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  @include center();
+  @media (min-width: 580px) {
+    background-position: center;
+    min-height: 100vh;
+  }
+}
+.wrapper {
+  @include wrapperMixin();
+  background-image: url("../../images/landingPagePhotos/Balkony.jpg");
+}
+.wrapper2 {
+  @include wrapperMixin();
+  background-image: url("../../images/landingPagePhotos/BalustradaIogrodzenie.jpg");
+}
+.wrapper3 {
+  @include wrapperMixin();
+  background-image: url("../../images/landingPagePhotos/OgrodzenieCzarne24.jpg");
+}
+.wrapper4 {
+  @include wrapperMixin();
+  background-image: url("../../images/landingPagePhotos/Balkon2.jpg");
+}
+
+.text {
+  width: 320px;
+  background-color: #ffffff;
+  border-radius: 21px;
+  position: relative;
+  padding: 60px 30px 30px 30px;
+  @include center();
+  justify-content: space-between;
+  flex-direction: column;
+  box-shadow: 10px 15px 20px -10px black;
+  font-size: 18px;
+
+  @media (min-width: 720px) {
+    width: 500px;
+    line-height: 24px;
+  }
+  @media (min-width: 1000px) {
+    width: 550px;
+  }
+}
+.title {
+  position: absolute;
+  top: 0;
+  left: 31px;
+  transform: translateY(-50%);
+  background: linear-gradient(90.38deg, #5b6bfb 12.05%, #0081ff 89.35%);
+  border-radius: 7px;
+  width: 165px;
+  height: 44px;
+  font-size: 20px;
+  color: #ffffff;
+  @include center();
+  box-shadow: -5px 5px 15px -3px black;
+  @media (min-width: 720px) {
+    width: 240px;
+    height: 50px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    left: 60px;
+  }
+}
+.title h1 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+}
+.img {
+  margin-top: 40px;
+  border-radius: 20px;
+  width: 100%;
+}
+.btn {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.fullImgWrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 995;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#fullImgWrapper {
+  z-index: 995;
+}
+.fullImg {
+  max-width: calc(100vw - 20px);
+  max-height: calc(100vh - 20px);
+  object-fit: scale-down;
+  z-index: 997;
+  @media (min-width: 1000px) {
+    max-width: calc(100vw - 60px);
+    max-height: calc(100vh - 60px);
+  }
+}
+.bgCloseBtn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  z-index: 996;
+  font-weight: normal;
+}
+.navWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 998;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: normal;
+  display: grid;
+  grid-template-columns: 1fr 50px;
+  grid-template-rows: 100%;
+  justify-items: center;
+  align-items: center;
+  @media (min-width: 900px) {
+    padding: 0 30px;
+  }
+}
+.closeBtnImg {
+  grid-column: 2/3;
+  font-size: 1.5em;
+  color: white;
+  z-index: 999;
+  @include center();
+}
+.photoTitle {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}

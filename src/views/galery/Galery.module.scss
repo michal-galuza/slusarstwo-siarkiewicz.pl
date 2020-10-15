@@ -1,0 +1,61 @@
+.wrapper {
+  width: 100%;
+  background-image: url("../../images/landingPagePhotos/Balkony.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 100px 0 100px 0;
+}
+
+.section {
+  position: relative;
+  background-color: white;
+  padding: 50px 5px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px 0px black;
+  width: 90%;
+  max-width: 850px;
+  margin: 50px auto 50px auto;
+
+  @media (min-width: 500px) {
+    width: 85%;
+  }
+  @media (min-width: 800px) {
+    width: 80%;
+  }
+}
+.title {
+  position: absolute;
+  top: 0;
+  left: 31px;
+  transform: translateY(-50%);
+  background: linear-gradient(90.38deg, #5b6bfb 12.05%, #0081ff 89.35%);
+  border-radius: 7px;
+  width: 165px;
+  height: 44px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -5px 5px 15px -3px black;
+  @media (min-width: 720px) {
+    width: 240px;
+    height: 50px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    left: 60px;
+  }
+}
+.img {
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 0 10px 0px grey;
+}
+.img:hover {
+  z-index: 500;
+  transform: scale(1.05);
+}
